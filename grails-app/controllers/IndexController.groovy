@@ -1,0 +1,4 @@
+class IndexController {
+
+    def index() { }
+}
