@@ -25,5 +25,4 @@ plugin.xml
 .settings
 
 # Unused grails files
-grails-app/i18n/
 grails-app/conf/UrlMappings.groovy
