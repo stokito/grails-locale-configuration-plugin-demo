@@ -39,6 +39,7 @@ grails.project.dependency.resolution = {
         mavenLocal()
         grailsCentral()
         mavenCentral()
+        //WATCHME
         mavenRepo 'http://dl.bintray.com/stokito/maven'
     }
 
@@ -55,7 +56,7 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.3.5"
         runtime ":jquery:1.10.2"
         runtime ":resources:1.2.1"
-
+        //WATCHME
         compile 'name.stokito:grails-locale-configuration-plugin:0.1'
     }
 }

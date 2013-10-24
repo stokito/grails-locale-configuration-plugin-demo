@@ -113,3 +113,8 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+//WATCHME
+supportedLocales = [Locale.ENGLISH, new Locale('RU')]
+defaultLocale=Locale.GERMAN
+
