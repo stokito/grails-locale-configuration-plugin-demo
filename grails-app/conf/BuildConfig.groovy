@@ -56,5 +56,6 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.10.2"
         runtime ":resources:1.2.1"
 
+        compile 'name.stokito:grails-locale-configuration-plugin:0.1'
     }
 }
