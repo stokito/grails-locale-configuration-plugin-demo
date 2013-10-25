@@ -55,3 +55,5 @@ For any questions feel free to contact me:
  * skype: stokito
  * https://linkedin.com/in/stokito
  * Sergey Ponomarev
+
+Also thanks to Barry Norman for contribution.
