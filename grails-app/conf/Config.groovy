@@ -115,6 +115,6 @@ log4j = {
 }
 
 //WATCHME
-supportedLocales = [Locale.ENGLISH, new Locale('RU')]
-defaultLocale=Locale.GERMAN
+name.stokito.smartLocaleResolver.supportedLocales = [Locale.ENGLISH, new Locale('RU')]
+name.stokito.smartLocaleResolver.defaultLocale=Locale.GERMAN
 
