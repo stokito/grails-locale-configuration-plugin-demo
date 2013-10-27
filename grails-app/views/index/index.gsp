@@ -1,5 +1,5 @@
 %{--WATCHME--}%
-<%@ page import="name.stokito.SmartConfigLocaleResolver" contentType="text/html;charset=UTF-8" %>
+<%@ page import="org.springframework.web.servlet.support.RequestContextUtils; name.stokito.SmartConfigLocaleResolver" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title><g:message code="title"/></title>
@@ -50,6 +50,11 @@
         <td>Your most preferred requested locale</td>
         <td><code>request.locale</code> that same as <code>request.locales[0]</code></td>
         <td>"${request.locale}"</td>
+    </tr>
+    <tr>
+        <td>Resolved locale</td>
+        <td><code>RequestContextUtils.getLocale(request)</code></td>
+        <td>"${RequestContextUtils.getLocale(request)}"</td>
     </tr>
     <tr>
         <td>We render page for you with locale</td>
