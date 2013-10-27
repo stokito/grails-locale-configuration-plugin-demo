@@ -41,8 +41,8 @@ NOTE: The default locale should also be in the list of the supported locales...
 Locales priority
 ================
 1. Language Param in the URL (request), e.g. http://www.example.net?lang=en
-2. First match of the locales from the HTTP-Accept-Language-Header
-3. Default locale (Config.groovy)
+2. First match of the locales from the HTTP Accept-Language header
+3. Default locale (defaultLocale option in Config.groovy)
 
 NOTE: This order is important and cannot be changed. You may want to provide a language selector, so the lang param should have the highest priority.
 
