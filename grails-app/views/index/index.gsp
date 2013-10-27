@@ -42,14 +42,14 @@
         <td>"${request.getHeader('Accept-Language')}"</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Other locales that you prefer</td>
+        <td><code>request.locales</code></td>
+        <td>"${request.locales*.toString().join(',')}"</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Your requested locale</td>
+        <td><code>request.locale</code> that same as <code>request.locales</code></td>
+        <td>"${request.locale}"</td>
     </tr>
     <tr>
         <td></td>
@@ -58,8 +58,6 @@
     </tr>
     </tbody>
 </table>
-<p>Other locales that you prefer (<code>request.locales</code>): <strong>"${request.locales*.toString().join(',')}"</strong></p>
-<p>Your requested locale (<code>request.locale</code> that same as <code>request.locales</code>) is: <strong>"${request.locale}"</strong></p>
 <p>You can choice your preferred locales in setting of browser (chrome://settings/languages).</p>
 <p>We render page for you with locale (<code>response.locale</code>) <strong>"${response.locale}"</strong></p>
 <div>
