@@ -37,7 +37,7 @@
         <td>"${session.getAttribute(SmartConfigLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME)}"</td>
     </tr>
     <tr>
-        <td><code>Accept-Language</code> header</td>
+        <td>Preferred locales in setting of browser (chrome://settings/languages)</td>
         <td><code>request.getHeader('Accept-Language')</code></td>
         <td>"${request.getHeader('Accept-Language')}"</td>
     </tr>
@@ -58,7 +58,6 @@
     </tr>
     </tbody>
 </table>
-<p>You can choice your preferred locales in setting of browser (chrome://settings/languages).</p>
 <p>We render page for you with locale (<code>response.locale</code>) <strong>"${response.locale}"</strong></p>
 <div>
     <form method="get">
