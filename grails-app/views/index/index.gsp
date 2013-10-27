@@ -47,18 +47,17 @@
         <td>"${request.locales*.toString().join(',')}"</td>
     </tr>
     <tr>
-        <td>Your requested locale</td>
-        <td><code>request.locale</code> that same as <code>request.locales</code></td>
+        <td>Your most preferred requested locale</td>
+        <td><code>request.locale</code> that same as <code>request.locales[0]</code></td>
         <td>"${request.locale}"</td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>We render page for you with locale</td>
+        <td><code>response.locale</code></td>
+        <td>"${response.locale}"</td>
     </tr>
     </tbody>
 </table>
-<p>We render page for you with locale (<code>response.locale</code>) <strong>"${response.locale}"</strong></p>
 <div>
     <form method="get">
         <g:localeSelect name="lang"/>
