@@ -15,6 +15,14 @@
 
 <body>
 <h1><g:message code="title"/></h1>
+
+<div>
+    <form method="get">
+        <g:localeSelect name="lang"/>
+        <input type="submit" value="Change locale"/>
+    </form>
+</div>
+<hr/>
 <table id="settings">
     <tbody>
     <tr>
@@ -70,11 +78,5 @@
     </tbody>
 </table>
 
-<div>
-    <form method="get">
-        <g:localeSelect name="lang"/>
-        <input type="submit" value="Change locale"/>
-    </form>
-</div>
 </body>
 </html>
