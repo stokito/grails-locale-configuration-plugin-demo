@@ -11,6 +11,7 @@
 <p>Default system locale: <strong>"${Locale.default}"</strong></p>
 <p>Supported locales are (supportedLocales in Config.groovy): <strong>"${grailsApplication.config.name.stokito.smartLocaleResolver.supportedLocales ?: []}"</strong>.</p>
 <p>Default locale (defaultLocale in Config.groovy): <strong>"${grailsApplication.config.name.stokito.smartLocaleResolver.defaultLocale ?: null}"</strong>.</p>
+<p><code>lang</code> param is: <strong>"${params.lang}"</strong></p>
 <p>Locale stored to session is: <strong>"${session.getAttribute(SmartConfigLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME)}"</strong></p>
 <p>Accept-Language: is <strong>"${request.getHeader('Accept-Language')}"</strong></p>
 <p>Other locales that you prefer: <strong>"${request.locales*.toString().join(',')}"</strong></p>
