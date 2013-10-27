@@ -4,11 +4,18 @@
 <head>
     <title><g:message code="title"/></title>
     <meta name="layout" content="main"/>
+    <style>
+        td {
+            max-width: 200px !important;
+            overflow-x: auto !important;
+            text-wrap: none !important;
+        }
+    </style>
 </head>
 
 <body>
 <h1><g:message code="title"/></h1>
-<table>
+<table id="settings">
     <tbody>
     <tr>
         <td>Default system locale</td>
@@ -25,7 +32,6 @@
         <td><code>name.stokito.smartLocaleResolver.defaultLocale</code> in <code>Config.groovy</code></td>
         <td>"${grailsApplication.config.name.stokito.smartLocaleResolver.defaultLocale ?: null}"</td>
     </tr>
-    <p><code>lang</code> param is: <strong></strong></p>
     <tr>
         <td>Locale from param in GET request</td>
         <td><code>params.lang</code></td>
@@ -63,6 +69,7 @@
     </tr>
     </tbody>
 </table>
+
 <div>
     <form method="get">
         <g:localeSelect name="lang"/>
