@@ -11,11 +11,11 @@
 <p>Default system locale: <strong>"${Locale.default}"</strong></p>
 <p>Supported locales are (supportedLocales in Config.groovy): <strong>"${grailsApplication.config.name.stokito.smartLocaleResolver.supportedLocales ?: []}"</strong>.</p>
 <p>Default locale (defaultLocale in Config.groovy): <strong>"${grailsApplication.config.name.stokito.smartLocaleResolver.defaultLocale ?: null}"</strong>.</p>
-<p>You can choice your preferred locales in setting of browser (chrome://settings/languages).</p>
 <p>Locale stored to session is: <strong>"${session.getAttribute(SmartConfigLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME)}"</strong></p>
 <p>Accept-Language: is <strong>"${request.getHeader('Accept-Language')}"</strong></p>
 <p>Other locales that you prefer: <strong>"${request.locales*.toString().join(',')}"</strong></p>
 <p>Your requested locale is <strong>"${request.locale}"</strong></p>
+<p>You can choice your preferred locales in setting of browser (chrome://settings/languages).</p>
 <p>We render page for you with locale <strong>"${response.locale}"</strong></p>
 <p>We render page for you with locale <strong>"${response.locale}"</strong></p>
 <div>
