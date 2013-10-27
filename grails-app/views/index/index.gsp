@@ -21,6 +21,17 @@
         <td>"${grailsApplication.config.name.stokito.smartLocaleResolver.supportedLocales ?: []}"</td>
     </tr>
     <tr>
+        <td>Default locale</td>
+        <td><code>name.stokito.smartLocaleResolver.defaultLocale</code> in <code>Config.groovy</code></td>
+        <td>"${grailsApplication.config.name.stokito.smartLocaleResolver.defaultLocale ?: null}"</td>
+    </tr>
+    <p><code>lang</code> param is: <strong></strong></p>
+    <tr>
+        <td>Locale from param in GET request</td>
+        <td><code>params.lang</code></td>
+        <td>"${params.lang}"</td>
+    </tr>
+    <tr>
         <td></td>
         <td></td>
         <td></td>
@@ -32,8 +43,6 @@
     </tr>
     </tbody>
 </table>
-<p>Default locale (<code>name.stokito.smartLocaleResolver.defaultLocale</code> in <code>Config.groovy</code>): <strong>"${grailsApplication.config.name.stokito.smartLocaleResolver.defaultLocale ?: null}"</strong>.</p>
-<p><code>lang</code> param is: <strong>"${params.lang}"</strong></p>
 <p>Locale stored to session is: <strong>"${session.getAttribute(SmartConfigLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME)}"</strong></p>
 <p><code>Accept-Language</code> header is: <strong>"${request.getHeader('Accept-Language')}"</strong></p>
 <p>Other locales that you prefer (<code>request.locales</code>): <strong>"${request.locales*.toString().join(',')}"</strong></p>
