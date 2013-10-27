@@ -11,14 +11,27 @@
 <table>
     <tbody>
     <tr>
+        <td>Default system locale</td>
+        <td><code>Locale.default</code></td>
+        <td>"${Locale.default}"</td>
+    </tr>
+    <tr>
+        <td>Supported locales</td>
+        <td><code>name.stokito.smartLocaleResolver.supportedLocales</code> in <code>Config.groovy</code></td>
+        <td>"${grailsApplication.config.name.stokito.smartLocaleResolver.supportedLocales ?: []}"</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     </tbody>
 </table>
-<p>Default system locale (<code>Locale.default</code>): <strong>"${Locale.default}"</strong></p>
-<p>Supported locales are (<code>name.stokito.smartLocaleResolver.supportedLocales</code> in <code>Config.groovy</code>): <strong>"${grailsApplication.config.name.stokito.smartLocaleResolver.supportedLocales ?: []}"</strong>.</p>
 <p>Default locale (<code>name.stokito.smartLocaleResolver.defaultLocale</code> in <code>Config.groovy</code>): <strong>"${grailsApplication.config.name.stokito.smartLocaleResolver.defaultLocale ?: null}"</strong>.</p>
 <p><code>lang</code> param is: <strong>"${params.lang}"</strong></p>
 <p>Locale stored to session is: <strong>"${session.getAttribute(SmartConfigLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME)}"</strong></p>
