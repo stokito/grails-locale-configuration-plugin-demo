@@ -115,6 +115,7 @@ log4j = {
 }
 
 //WATCHME
-name.stokito.smartLocaleResolver.supportedLocales = [Locale.ENGLISH, new Locale('RU')]
-name.stokito.smartLocaleResolver.defaultLocale=Locale.GERMAN
+// order is matters!
+grails.plugins.localeConfiguration.supportedLocales = [new Locale('ru'), new Locale('uk'), Locale.ITALIAN, new Locale('es'), Locale.ENGLISH]
+grails.plugins.localeConfiguration.defaultLocale=Locale.ENGLISH
 
