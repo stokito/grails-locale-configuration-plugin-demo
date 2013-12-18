@@ -1,5 +1,4 @@
-Grails Locale Configuration Plugin Example Application
-======================================================
+# Grails Locale Configuration Plugin Example Application
 
 [Grails Locale Configuration Plugin] (https://github.com/stokito/grails-locale-configuration-plugin) enhances the handling of Grails localization (i18n).
 
@@ -8,47 +7,46 @@ You can specify a list of supported languages and choose which language to use i
 
 For example, if your site supports only English, Russian and German, you can send users with other locales to the default language (English).
 
-Installation
-================
+## Installation
 Please add the following repository and dependency to your BuildConfig.groovy:
-
-    grails.project.dependency.resolution = {
+```groovy
+grails.project.dependency.resolution = {
+    ...
+    plugins {
         ...
-        plugins {
-            ...
-            compile ':locale-configuration:1.0'
-            ...
-        }
+        compile ':locale-configuration:1.0'
         ...
     }
+    ...
+}
+```
 
-Configuration
-=============
+## Configuration
 Add the following lines to your Config.groovy.
+```groovy
+// order is matters!
+grails.plugins.localeConfiguration.supportedLocales = [Locale.GERMAN, Locale.ENGLISH]
+grails.plugins.localeConfiguration.defaultLocale = Locale.ENGLISH
+```
 
-    // order is matters!
-    grails.plugins.localeConfiguration.supportedLocales = [Locale.GERMAN, Locale.ENGLISH]
-    grails.plugins.localeConfiguration.defaultLocale = Locale.ENGLISH
-
-Locales priority
-================
+## Locales priority
 1. Language Param in the URL (request), e.g. http://www.example.net?lang=en
 2. First match of the locales from the HTTP Accept-Language header
 3. Default locale (defaultLocale option in Config.groovy)
 
-NOTE: This order is important and cannot be changed. You may want to provide a language selector, so the lang param should have the highest priority.
+**NOTE:** This order is important and cannot be changed. You may want to provide a language selector, so the lang param should have the highest priority.
 
 [Take a look into specification for more details](/test/unit/name/stokito/SmartConfigLocaleResolverSpec.groovy)
 
-Running application example
-===========================
+## Running application example
 Take a look at the demo to see the plugin in action: [Grails Locale Configuration Plugin demo application] (https://github.com/stokito/grails-locale-configuration-plugin-demo)
 
-NOTE: If you want to test your locales (languages), just add the locales to the Config.groovy as descriped in 'Configuration'.
+**NOTE:** If you want to test your locales (languages), just add the locales to the Config.groovy as descriped in 'Configuration'.
 
 Run demo, like every other Grails application
-
-    grails run-app
+```sh
+grails run-app
+```
 
 Application can be accessed by URL http://localhost:8080/
 
@@ -59,12 +57,10 @@ All important changes in source code are marked with comment WATCHME. Just run s
 ![Screenshot WATCHME in sources](/screenshot_watchme_in_sources.png "Screenshot WATCHME in sources")
 
 
-Support
-=======
+## Support
 For any questions feel free to contact me:
 
  * stokito@gmail.com
- * skype: stokito
  * https://linkedin.com/in/stokito
  * [Sergey Ponomarev](http://stokito.wordpress.com/)
 
