@@ -13,7 +13,7 @@ Please add the following repository and dependency to your `BuildConfig.groovy`:
 grails.project.dependency.resolution = {
     plugins {
         ...
-        compile ':locale-configuration:1.1'
+        compile ':locale-configuration:1.1.1'
         ...
     }
 }
