@@ -3,9 +3,11 @@ grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 grails.project.work.dir = "target/work"
-grails.project.target.level = 1.6
-grails.project.source.level = 1.6
+grails.project.target.level = 1.7
+grails.project.source.level = 1.7
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
+//grails.plugin.location.langSelector = '../langSelector'
+//grails.plugin.location.localeConfiguration = '../grails-locale-configuration-plugin'
 
 grails.project.fork = [
     // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
@@ -53,6 +55,6 @@ grails.project.dependency.resolution = {
         runtime ":hibernate:3.6.10.6" // or ":hibernate4:4.1.11.2"
         runtime ":resources:1.2.1"
         //WATCHME
-        compile ':locale-configuration:1.0'
+        compile ':locale-configuration:1.1'
     }
 }

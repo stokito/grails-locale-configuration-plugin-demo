@@ -1,9 +1,11 @@
 %{--WATCHME--}%
-<%@ page import="org.springframework.web.servlet.support.RequestContextUtils; name.stokito.SmartConfigLocaleResolver" contentType="text/html;charset=UTF-8" %>
+<%@ page import="grails.plugin.localeConfiguration.SmartConfigLocaleResolver; org.springframework.web.servlet.support.RequestContextUtils" contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title><g:message code="title"/></title>
     <meta name="layout" content="main"/>
+    <r:require module="langSelector"/>
     <style>
         td {
             max-width: 200px !important;
@@ -15,6 +17,8 @@
 
 <body>
 <h1><g:message code="title"/></h1>
+
+%{--<langs:selector langs="en, es, pt-BR, ru"/>--}%
 
 <div>
     <form method="get">
@@ -32,13 +36,13 @@
     </tr>
     <tr>
         <td>Supported locales</td>
-        <td><code>name.stokito.smartLocaleResolver.supportedLocales</code> in <code>Config.groovy</code></td>
-        <td>"${grailsApplication.config.name.stokito.smartLocaleResolver.supportedLocales ?: []}"</td>
+        <td><code>grails.plugin.localeConfiguration.supportedLocales</code> in <code>Config.groovy</code></td>
+        <td>"${grailsApplication.config.grails.plugin.localeConfiguration.supportedLocales ?: []}"</td>
     </tr>
     <tr>
         <td>Default locale</td>
-        <td><code>name.stokito.smartLocaleResolver.defaultLocale</code> in <code>Config.groovy</code></td>
-        <td>"${grailsApplication.config.name.stokito.smartLocaleResolver.defaultLocale ?: null}"</td>
+        <td><code>grails.plugin.localeConfiguration.defaultLocale</code> in <code>Config.groovy</code></td>
+        <td>"${grailsApplication.config.grails.plugin.localeConfiguration.defaultLocale ?: null}"</td>
     </tr>
     <tr>
         <td>Locale from param in GET request</td>
@@ -47,8 +51,8 @@
     </tr>
     <tr>
         <td>Locale stored to session</td>
-        <td><code>session.getAttribute(SmartConfigLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME)</code></td>
-        <td>"${session.getAttribute(SmartConfigLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME)}"</td>
+        <td><code>session[SmartConfigLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME]</code></td>
+        <td>"${session[SmartConfigLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME]}"</td>
     </tr>
     <tr>
         <td>Preferred locales in setting of browser (chrome://settings/languages)</td>

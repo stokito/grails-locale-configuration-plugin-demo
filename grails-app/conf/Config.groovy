@@ -112,10 +112,12 @@ log4j = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+    info 'grails.plugin.localeConfiguration'
+    info 'grails.plugin.langSelector'
 }
 
 //WATCHME
 // order is matters!
-grails.plugins.localeConfiguration.supportedLocales = [new Locale('ru'), new Locale('uk'), Locale.ITALIAN, new Locale('es'), Locale.ENGLISH]
-grails.plugins.localeConfiguration.defaultLocale=Locale.ENGLISH
+grails.plugin.localeConfiguration.supportedLocales = [new Locale('ru'), new Locale('uk'), Locale.ITALIAN, new Locale('es'), Locale.ENGLISH]
+grails.plugin.localeConfiguration.defaultLocale=Locale.ENGLISH
 
