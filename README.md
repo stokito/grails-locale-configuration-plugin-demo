@@ -13,7 +13,7 @@ Please add the following repository and dependency to your `BuildConfig.groovy`:
 grails.project.dependency.resolution = {
     plugins {
         ...
-        compile ':locale-configuration:1.0'
+        compile ':locale-configuration:1.1'
         ...
     }
 }
@@ -23,8 +23,8 @@ grails.project.dependency.resolution = {
 Add the following lines to your `Config.groovy`:
 ```groovy
 // order is matters!
-grails.plugins.localeConfiguration.supportedLocales = [Locale.GERMAN, Locale.ENGLISH]
-grails.plugins.localeConfiguration.defaultLocale = Locale.ENGLISH
+grails.plugin.localeConfiguration.supportedLocales = [Locale.GERMAN, Locale.ENGLISH]
+grails.plugin.localeConfiguration.defaultLocale = Locale.ENGLISH
 ```
 
 ## Locales priority
@@ -34,7 +34,7 @@ grails.plugins.localeConfiguration.defaultLocale = Locale.ENGLISH
 
 **NOTE:** This order is important and cannot be changed. You may want to provide a language selector, so the lang param should have the highest priority.
 
-[Take a look into specification for more details](/test/unit/name/stokito/SmartConfigLocaleResolverSpec.groovy)
+[Take a look into specification for more details](https://github.com/stokito/grails-locale-configuration-plugin/test/unit/grails/plugin/localeConfiguration/SmartConfigLocaleResolverSpec.groovy)
 
 ## Running application example
 Take a look at the demo to see the plugin in action: [Grails Locale Configuration Plugin demo application] (https://github.com/stokito/grails-locale-configuration-plugin-demo)
