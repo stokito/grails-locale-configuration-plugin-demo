@@ -55,6 +55,6 @@ grails.project.dependency.resolution = {
         runtime ":hibernate:3.6.10.6" // or ":hibernate4:4.1.11.2"
         runtime ":resources:1.2.1"
         //WATCHME
-        compile ':locale-configuration:1.1'
+        compile ':locale-configuration:1.1.1'
     }
 }
